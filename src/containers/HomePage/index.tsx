@@ -1,5 +1,5 @@
 import * as React from 'react';
-import NavBar from '../../components/NavBar';
+import Helmet from 'react-helmet';
 
 interface HomePageProps {}
 
@@ -9,7 +9,10 @@ class HomePage extends React.Component<HomePageProps, HomePageState> {
   public render(): JSX.Element {
     return (
       <>
-        <NavBar isLoggedIn={false} />
+        <Helmet>
+          <title>Home - Crawler Plus</title>
+        </Helmet>
+        <div>Home Page</div>
       </>
     );
   }
